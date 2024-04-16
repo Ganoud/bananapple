@@ -63,10 +63,13 @@ li a:hover:not(.active) {
     background-color: #04AA6D;
 }
 
-.custom-slider { display: none; }
+.custom-slider { 
+  display: none; 
+}
 .slide-container {
   max-width: 800px;
   position: relative;
+  background-color: #CACACA;
   margin: auto;
 }
 .prev, .next {
@@ -91,7 +94,7 @@ li a:hover:not(.active) {
   background-color: rgba(0,0,0,0.5);
 }
 .slide-text {
-  position: absolute;
+  position: relative;
   color: #ffffff;
   font-size: 15px;
   padding: 15px;
@@ -107,8 +110,11 @@ li a:hover:not(.active) {
   top: 0;
 }
 .slide-img{ 
-  width: 100%; 
-  height: 300px;
+  width: 20%; 
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   object-fit: cover;
   object-position: center;
  }
