@@ -61,14 +61,13 @@
             </div>
         </div>
             <ul class="nav">
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bphone</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BananaWatch</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bipad</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiPhone</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiPad</a></li>
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiWatch</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiPod</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BananaTag</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Banana Speaker</a></li>
-            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiMac</a></li>
+           <!-- <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiPod</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiTag</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiSpeaker</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">BiMac</a></li> -->
         </ul>
 
         <!--Slidehow-->
