@@ -15,17 +15,23 @@
     require "general.php";
     require "menu.php";
     ?>
-    <div class="description">
+    <h2 class="title">
         <?php
         if (isset($_GET['categorie'])) {
             $categorie = $_GET['categorie'];
         }
-        $request = "SELECT description FROM product_category WHERE id=?";
+        $request = "SELECT name, description FROM product_category WHERE id=?";
         $statement = $conn->prepare($request);
         $statement->bind_param("s", $categorie);
         $statement->execute();
-        $result = $statement->get_result();
-        echo $result->fetch_assoc()["description"];
+        $result = $statement->get_result()->fetch_assoc();
+
+        echo $result["name"];
+        ?>
+    </h2>
+    <div class="description">
+        <?php
+        echo $result["description"];
         ?>
     </div>
 
