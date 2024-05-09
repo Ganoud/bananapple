@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-<?php
-require ("general.php");
-?>
 <script>
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -57,6 +54,7 @@ require ("general.php");
 
 <body>
     <?php
+    require ("general.php");
     require ("menu.php");
     ?>
     <!--Slidehow-->
