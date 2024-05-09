@@ -12,8 +12,8 @@
 
 <body>
     <?php
-    require ("general.php");
-    require ("menu.php");
+    require "general.php";
+    require "menu.php";
     ?>
     <!--Slidehow-->
 

@@ -12,10 +12,35 @@
 
 <body>
     <?php
-    require ("general.php");
-    require ("menu.php");
+    require "general.php";
+    require "menu.php";
     ?>
-    <div>
+    <div class="description">
+        <?php
+        if (isset($_GET['categorie'])) {
+            $categorie = $_GET['categorie'];
+        }
+        $request = "SELECT description FROM product_category WHERE id=?";
+        $statement = $conn->prepare($request);
+        $statement->bind_param("s", $categorie);
+        $statement->execute();
+        $result = $statement->get_result();
+        echo $result->fetch_assoc()["description"];
+        ?>
+    </div>
 
+    <div class="card-list">
+        <?php
+
+        $request = "SELECT * FROM products WHERE category_id=?";
+        $statement = $conn->prepare($request);
+        $statement->bind_param("s", $categorie);
+        $statement->execute();
+        $products = $statement->get_result();
+
+        foreach ($products as $product) {
+            // show card for each product
+        }
+        ?>
     </div>
 </body>
