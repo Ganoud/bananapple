@@ -14,6 +14,7 @@
         echo "<li><a href='https://localhost:3000/" . $productName['name'] . "'>";
 
         echo $productName['name'];
+        echo "</a></li>";
     }
     ?>
 </ul>
