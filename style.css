@@ -17,13 +17,15 @@ h1.title {
   align-items: center;
 }
 
-h2.title {
+.cat-title {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 100px;
   font-weight: 100;
+  letter-spacing: 20px;
   margin: 1%;
+  font-family: "Roboto";
 }
 
 a {
@@ -171,4 +173,32 @@ li a:hover:not(.active) {
   padding: 14px 16px;
   text-decoration: none;
   float: left;
+}
+
+.inscription-box {
+  width: 20em;
+  margin: 10em auto;
+  text-align: center;
+  border: 1px solid #CACACA;
+  padding: 0 0 13px 0;
+}
+
+.form-element {
+  padding: 5px 0;
+}
+
+.button {
+  background-color: white;
+  border: 1px solid;
+  color: black;
+  border-color: #CACACA;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.button:hover {
+  background-color: #a8a8a8;
 }

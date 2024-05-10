@@ -16,7 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->bind_param("ss", $email, $hashed_password);
 
     if ($statement->execute()) {
-        echo "Inscription réussie. Vous pouvez vous connecter maintenant.";
+        //la connexion à réussi
+        //TODO: connecter l'utilisate
+        header("Location:" . $base_url . "accueil.php");
     } else {
         echo "Erreur lors de l'inscription.";
     }
