@@ -31,6 +31,7 @@
         echo $result["name"];
         ?>
     </h2>
+    <hr>
     <div class="description">
         <?php
         echo $result["description"];
