@@ -21,25 +21,35 @@
     <hr>
 
     <?php
-    $request = "SELECT * FROM products WHERE id=25";
+    $ids = array(27, 45, 39);
+    $id_list = implode(',', $ids);
+
+    $request = "SELECT * FROM products WHERE id IN ($id_list);";
     $statement = $conn->prepare($request);
     $statement->execute();
-    $product = $statement->get_result()->fetch_assoc();
-
+    $products = $statement->get_result();
     ?>
 
     <div class="testpourlinstan">
         <div class="cart-items-container">
-            <div class="cart-item">
-                <?php echo $product["name"] ?>
-            </div>
+            <?php
+            foreach ($products as $product) {
+                include "card-temp.php";
+            }
+            ?>
         </div>
         <div class="cart-summary">
             <p>Résumé de vos achats :</p>
             <br>
-            <?php echo "- " . $product["name"] ?>
-            <br><br>
-            <p>Total : <?php echo $product["price"] ?> €</p>
+            <?php
+            $total = 0;
+            foreach ($products as $product) {
+                echo "- " . $product["name"] . "<br>";
+                $total += $product["price"];
+            }
+            ?>
+            <br>
+            <p>Total : <?php echo $total ?> €</p>
         </div>
     </div>
 </body>
