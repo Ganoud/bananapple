@@ -28,17 +28,18 @@
 
     ?>
 
-    <div class=""></div>
-    <div class="cart-items-container">
-        <div class="cart-item">
-            <?php echo $product["name"] ?>
+    <div class="testpourlinstan">
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <?php echo $product["name"] ?>
+            </div>
         </div>
-        <div>
-
+        <div class="cart-summary">
+            <p>Résumé de vos achats :</p>
+            <br>
+            <?php echo "- " . $product["name"] ?>
+            <br><br>
+            <p>Total : <?php echo $product["price"] ?> €</p>
         </div>
     </div>
-    <div class="cart-summary">
-
-    </div>
-
 </body>

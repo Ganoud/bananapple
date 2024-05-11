@@ -216,10 +216,26 @@ hr {
 }
 
 .cart-item {
-  width: 50em;
-  margin: 3em;
+  width: 90%;
+  margin: auto;
   text-align: center;
   border: 1px solid #CACACA;
   padding: 0;
   /*   border-radius: 10%; */
+}
+
+.testpourlinstan {
+  display: flex;
+  font-size: 30px;
+  margin: 3em auto;
+}
+
+.cart-items-container {
+  width: 90%;
+}
+
+.cart-summary {
+  border: 2px solid red;
+  width: 25%;
+  text-align: center;
 }

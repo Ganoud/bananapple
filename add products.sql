@@ -1,3 +1,5 @@
+DELETE FROM products;
+
 INSERT INTO products (name, price, description, category_id, discount)
 VALUES 
 ("BiPhone X", 999.99, "Le dernier smartphone révolutionnaire de Banana. Avec un écran Super Bi Retina XDR.", 2, 0),
@@ -14,13 +16,13 @@ VALUES
 INSERT INTO products (name, price, description, category_id, discount)
 VALUES 
 ("BiPad Pro", 1299.99, "La tablette la plus avancée de Banana, avec un écran Liquid Bi Retina et une puce M1.", 3, 0),
-("BiPad Air", 899.99, "Une tablette légère et puissante par Banana, avec un écran Liquid Bi Retina et la compatibilité Apple Pencil.", 3, 0),
+("BiPad Air", 899.99, "Une tablette légère et puissante par Banana, avec un écran Liquid Bi Retina et la compatibilité Banana Pencil.", 3, 0),
 ("BiPad Mini", 499.99, "Une tablette compacte par Banana, idéale pour la portabilité et la productivité.", 3, 0),
 ("BiPad (2021)", 599.99, "La dernière version de la tablette emblématique de Banana, avec un design élégant et des performances supérieures.", 3, 0),
 ("BiPad Pro 12.9 (2022)", 1499.99, "La tablette ultime de Banana, avec un écran Liquid Bi XDR et des capacités de studio.", 3, 0),
 ("BiPad 10.2 (2022)", 329.99, "La tablette polyvalente de Banana, parfaite pour le travail et les loisirs.", 3, 0),
 ("BiPad Pro 11 (2022)", 1099.99, "Une tablette puissante et portable par Banana, conçue pour les professionnels créatifs.", 3, 0),
-("BiPad 9.7 (2021)", 399.99, "Une tablette abordable par Banana, avec un écran Retina et une compatibilité avec Apple Pencil.", 3, 0),
+("BiPad 9.7 (2021)", 399.99, "Une tablette abordable par Banana, avec un écran Retina et une compatibilité avec Banana Pencil.", 3, 0),
 ("BiPad Mini 6 (2021)", 699.99, "La dernière version de la tablette compacte de Banana, avec des performances améliorées et un design élégant.", 3, 0),
 ("BiPad Air 5 (2021)", 799.99, "Une tablette élégante et performante par Banana, avec un design fin et des performances améliorées.", 3, 0);
 
