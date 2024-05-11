@@ -17,7 +17,7 @@ h1.title {
   align-items: center;
 }
 
-.cat-title {
+.page-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,13 +181,14 @@ li a:hover:not(.active) {
   text-align: center;
   border: 1px solid #CACACA;
   padding: 0 0 13px 0;
+  border-radius: 10%;
 }
 
 .form-element {
   padding: 5px 0;
 }
 
-.button {
+input[type=submit] {
   background-color: white;
   border: 1px solid;
   color: black;
@@ -199,11 +200,26 @@ li a:hover:not(.active) {
   margin: 4px 2px;
 }
 
-.button:hover {
+input[type=submit]:hover {
   background-color: #a8a8a8;
+}
+
+input[type=email],
+input[type=password] {
+  border: 2px solid #CACACA;
+  border-radius: 4px;
 }
 
 hr {
   width: 50%;
   margin: auto;
+}
+
+.cart-item {
+  width: 50em;
+  margin: 3em;
+  text-align: center;
+  border: 1px solid #CACACA;
+  padding: 0;
+  /*   border-radius: 10%; */
 }
