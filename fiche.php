@@ -16,13 +16,29 @@
     require "menu.php";
     ?>
 
-    <div class="card">
-        <div class="card-image"></div>
-        <div class="card-content">
-            <h2 class="card-title">Titre de la carte 2</h2>
-            <p class="card-description">Description de la carte.</p>
+    <div class="card-container">
+
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h2 class="card-title">BiPhone</h2>
+                <p class="card-description">Description de la carte.</p>
+            </div>
         </div>
-    </div>
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h2 class="card-title">BiPad</h2>
+                <p class="card-description">Description de la carte.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <h2 class="card-title">BiWatch</h2>
+                <p class="card-description">Description de la carte.</p>
+            </div>
+        </div>
 
 
 </body>
