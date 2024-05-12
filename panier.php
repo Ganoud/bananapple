@@ -21,10 +21,16 @@
     <hr>
 
     <?php
-    $ids = array(27, 45, 39);
-    $id_list = implode(',', $ids);
+    session_start();
 
-    $request = "SELECT * FROM products WHERE id IN ($id_list);";
+    if (empty($_SESSION["panier"])) {
+        echo "<p>Votre panier est vide</p>";
+        return;
+    }
+
+    $ids = implode(',', $_SESSION["panier"]);
+
+    $request = "SELECT * FROM products WHERE id IN ($ids);";
     $statement = $conn->prepare($request);
     $statement->execute();
     $products = $statement->get_result();
@@ -44,8 +50,9 @@
             <?php
             $total = 0;
             foreach ($products as $product) {
-                echo "- " . $product["name"] . "<br>";
-                $total += $product["price"];
+                $occurence = array_count_values($_SESSION["panier"])[$product["id"]];
+                echo "- " . $product["name"] . " x" . $occurence . "<br>";
+                $total += $product["price"] * $occurence;
             }
             ?>
             <br>

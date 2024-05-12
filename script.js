@@ -39,3 +39,40 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
+
+function addToPanier(n) {
+    console.log("insh");
+    // Créer une nouvelle requête AJAX
+    var xhr = new XMLHttpRequest();
+
+    // Spécifier le type de requête et l'URL du fichier PHP
+    xhr.open('POST', 'addPanier.php', true);
+
+    // Définir le type de contenu de la requête envoyée
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Définir ce qui se passe lors de la fin de la requête
+    xhr.onload = function () {
+        // Vérifier si la requête s'est bien déroulée
+        if (xhr.status === 200) {
+            // Afficher la réponse du serveur dans la console
+            console.log("response :")
+            console.log(xhr.responseText);
+        } else {
+            // Afficher un message d'erreur si la requête a échoué
+            console.log("oupsi");
+            console.error('La requête a échoué. Statut de la réponse : ' + xhr.status);
+        }
+    };
+
+    // Récupérer des données que vous souhaitez envoyer au fichier PHP
+    var dataToSend = 'id=' + n;
+
+    // Envoyer les données
+    xhr.send(dataToSend);
+    console.log("ça a marché");
+}
+
+function test() {
+    console.log("coucou");
+}

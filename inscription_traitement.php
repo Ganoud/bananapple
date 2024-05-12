@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($statement->execute()) {
         //la connexion à réussi
-        //TODO: connecter l'utilisate
+        //TODO: connecter l'utilisateur
         header("Location:" . $base_url . "accueil.php");
     } else {
         echo "Erreur lors de l'inscription.";
