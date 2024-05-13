@@ -5,6 +5,12 @@
   font-weight: 300;
 }
 
+body {
+  background-image: url('boutique.jpg');
+  background-size: cover; 
+  background-position: center;
+}
+
 .pagetop {
   background-color: #616A6B;
   display: flex;
@@ -351,7 +357,7 @@ hr {
   width: 90%;
   margin: auto;
   text-align: center;
-  border: 1px solid #CACACA;
+  border: 1px solid #cacacaec;
   padding: 0;
   /*   border-radius: 10%; */
 }
