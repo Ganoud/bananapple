@@ -17,10 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productId = $postData['productId'];
     $amount = $postData['amount'];
 
-    // Ajouter l'ID de l'article au panier
-    for ($i = 0; $i < $amount; $i++) {
-        $_SESSION["panier"][] = $productId;
+    if ($amount == 0) {
+        unset($_SESSION["panier"][$productId]);
+    } else {
+        $_SESSION["panier"][$productId] = $amount;
     }
+    // Ajouter l'ID de l'article au panier
+
 
     echo "Item successulfy added";
 } else {

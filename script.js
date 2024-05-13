@@ -150,10 +150,43 @@ function showImage(index) {
 }
 
 
-function addToPanier(productId, amount) {
+function addToPanier(productId, amount = 1, reload = false) {
+
+    if (amount == 0) {
+        if (!confirm("Vous êtes sur le point de supprimer cet article du panier, êtes vous sûr ?")) {
+            return;
+        }
+    }
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'addPanier.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function () {
+        // Vérifier si la requête s'est bien déroulée
+        if (xhr.status === 200) {
+            // Afficher la réponse du serveur dans la console
+            console.log("Success : " + xhr.status)
+            if (reload) {
+                location.reload();
+            }
+        } else {
+            // Afficher un message d'erreur si la requête a échoué
+            console.error('La requête a échoué. Statut de la réponse : ' + xhr.status);
+        }
+    };
+
+    var dataToSend = {
+        productId: productId,
+        amount: amount,
+    }
+    jsonData = JSON.stringify(dataToSend);
+    xhr.send(jsonData);
+}
+
+function clearPanier() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'clearPanier.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -167,12 +200,7 @@ function addToPanier(productId, amount) {
         }
     };
 
-    var dataToSend = {
-        productId: productId,
-        amount: amount,
-    }
-    jsonData = JSON.stringify(dataToSend);
-    xhr.send(jsonData);
+    xhr.send();
 }
 
 currentSlide(1);
