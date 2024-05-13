@@ -5,6 +5,8 @@
   font-weight: 300;
 }
 
+
+
 .pagetop {
   background-color: #616A6B;
   display: flex;
@@ -19,17 +21,19 @@
   display: flex;
 }
 
-.header-button {
-  background-color: transparent;
+.btn {
+  background-color: #616A6B;
   border: none;
-  color: #D7DBDD;
-  font-size: 16px;
-  margin-left: 10px; 
+  color: white;
+  padding: 16px 16px;
+  font-size: 30px;
   cursor: pointer;
 }
 
-.header-button:hover {
-  text-decoration: underline; 
+
+.icon {
+  width: 30%; 
+  height: auto; 
 }
 
 
