@@ -5,13 +5,13 @@
     </a>
     <div class="header-buttons">
         <div>
-            <a href="connexion.php" class="btn">
+            <a href=<?php echo $base_url . "connexion.php" ?> class="btn">
                 <i class="fa fa-user-o"></i>
             </a>
-            <a href="panier.php" class="button">
+            <a href=<?php echo $base_url . "panier.php" ?> class="button">
                 <i class="fa fa-shopping-cart"></i>
             </a>
-            <a href="contact.php" class="btn">
+            <a href=<?php echo $base_url . "contact.php" ?> class="btn">
                 <i class="fa fa-mobile fa-lg"></i>
             </a>
         </div>
@@ -19,7 +19,10 @@
 </div>
 <ul class="nav">
     <?php
-    $products = DatabaseGet("SELECT id, name FROM product_category", $conn);
+    $request = "SELECT id, name FROM product_category";
+    $statement = $conn->prepare($request);
+    $statement->execute();
+    $products = $statement->get_result();
     foreach ($products as $product) {
 
         echo "<li class='menu'><a href='" . $base_url . "categorie.php?categorie=" . $product['id'] . "'>";

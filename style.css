@@ -32,8 +32,8 @@
 
 
 .icon {
-  width: 30%; 
-  height: auto; 
+  width: 30%;
+  height: auto;
 }
 
 
@@ -437,14 +437,11 @@ hr {
   align-items: center;
 }
 
-button {
+.amount-button {
   padding: 5px 10px;
   border: none;
   background-color: #f0f0f0;
   cursor: pointer;
 }
 
-input {
-  width: 150px;
-  text-align: center;
-}
+

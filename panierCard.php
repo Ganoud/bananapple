@@ -10,10 +10,12 @@
             <div class="cart-info">
                 Quantité :
                 <br>
-                <button onclick="addToPanier(<?php echo $productId . ', ' . $amount - 1 ?>, true)">-</button>
+                <button class="amount-button"
+                    onclick="addToPanier(<?php echo $productId . ', ' . $amount - 1 ?>, true)">-</button>
 
                 <?php echo $amount ?>
-                <button onclick="addToPanier(<?php echo $productId . ', ' . $amount + 1 ?>, true)">-</button>
+                <button class="amount-button"
+                    onclick="addToPanier(<?php echo $productId . ', ' . $amount + 1 ?>, true)">+</button>
             </div>
         </div>
         <div class="cart-info">

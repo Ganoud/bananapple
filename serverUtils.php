@@ -13,9 +13,3 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "
 $domain = $_SERVER['SERVER_NAME'];
 $port = $_SERVER['SERVER_PORT'];
 $base_url = $protocol . "://" . $domain . ":" . $port . "/";
-
-function DatabaseGet(string $sqlQuery, $conn)
-{
-    $results = mysqli_query($conn, $sqlQuery);
-    return mysqli_fetch_all($results, MYSQLI_ASSOC);
-}
