@@ -38,7 +38,7 @@
         ?>
     </div>
 
-    <div class="card-list">
+    <div class="card-container">
         <?php
 
         $request = "SELECT * FROM products WHERE category_id=?";
@@ -49,7 +49,10 @@
 
         foreach ($products as $product) {
             // show card for each product
-            echo "<p>" . $product["name"] . "</p>";
+            $name = $product["name"];
+            $desc = $product["description"];
+            include "card.php";
+            //echo "<p>" . $product["name"] . "</p>";
         }
         ?>
     </div>

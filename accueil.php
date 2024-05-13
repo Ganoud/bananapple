@@ -7,7 +7,6 @@
     <link rel="icon" href="logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -43,6 +42,25 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
+    <div class="card-container">
+        <?php
+
+        $request = "SELECT * FROM products";
+        $statement = $conn->prepare($request);
+        $statement->execute();
+        $products = $statement->get_result();
+
+        foreach ($products as $product) {
+            // show card for each product
+            $name = $product["name"];
+            $desc = $product["description"];
+            include "card.php";
+            //echo "<p>" . $product["name"] . "</p>";
+        }
+        ?>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

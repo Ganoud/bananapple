@@ -1,9 +1,9 @@
-<a href="<?php $base_url ?>/accueil.php">
-    <div class="pagetop">
+<div class="pagetop">
+    <a href="<?php echo $base_url . "accueil.php" ?>" class="logoAndName">
         <img src="logopetit.png" alt="imagelogo">
         <h1 class="title">Banana</h1>
-    </div>
-</a>
+    </a>
+</div>
 <ul class="nav">
     <?php
     $products = DatabaseGet("SELECT id, name FROM product_category", $conn);

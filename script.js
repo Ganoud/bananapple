@@ -1,6 +1,6 @@
 
 var slideIndex = 1;
-showSlides(slideIndex);
+
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -57,8 +57,7 @@ function openModal(productName, productPrice, images) {
         var carouselItem = document.createElement('div');
         carouselItem.classList.add('.carousel-item');
         carouselItem.innerHTML = '<img src="' + image + '" alt="Image ' + (index + 1) + '">';
-        if (index === 0) w
-        {
+        if (index === 0) {
             carouselItem.classList.add('active');
         }
 
@@ -113,8 +112,7 @@ function openModal(productName, productPrice, images) {
         var carouselItem = document.createElement('div');
         carouselItem.classList.add('.carousel-item');
         carouselItem.innerHTML = '<img src="' + image + '" alt="Image ' + (index + 1) + '">';
-        if (index === 0) w
-        {
+        if (index === 0) {
             carouselItem.classList.add('active');
         }
 
@@ -152,7 +150,7 @@ function showImage(index) {
 }
 
 
-function addToPanier(n) {
+function addToPanier(productId, amount) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'addPanier.php', true);
@@ -169,6 +167,12 @@ function addToPanier(n) {
         }
     };
 
-    var dataToSend = 'id=' + n;
-    xhr.send(dataToSend);
+    var dataToSend = {
+        productId: productId,
+        amount: amount,
+    }
+    jsonData = JSON.stringify(dataToSend);
+    xhr.send(jsonData);
 }
+
+currentSlide(1);
