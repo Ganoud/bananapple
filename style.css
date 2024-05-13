@@ -58,6 +58,12 @@ h1.title {
   font-family: "Roboto";
 }
 
+.page-subtitle {
+  margin-top: 5em;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -72,6 +78,7 @@ a {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  font-size: 1.2em;
 }
 
 li a:hover:not(.active) {
@@ -374,12 +381,34 @@ hr {
 }
 
 .cart-item {
+  display: flex;
+  flex-flow: row;
   width: 90%;
-  margin: auto;
+  margin: 0 auto 1em;
+  border: 1px solid #CACACA;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.cart-image {
+  width: 10%;
+  height: 10%;
+}
+
+.cart-content {
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cart-title {
+  font-size: 50px;
+}
+
+.cart-info {
+  font-size: 50px;
   text-align: center;
-  border: 1px solid #cacacaec;
-  padding: 0;
-  /*   border-radius: 10%; */
 }
 
 .testpourlinstan {
@@ -393,7 +422,29 @@ hr {
 }
 
 .cart-summary {
-  border: 2px solid red;
+  border: 1px solid #CACACA;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.summary-collumn {
   width: 25%;
+  margin: 0 1em;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+input {
+  width: 40px;
   text-align: center;
 }
