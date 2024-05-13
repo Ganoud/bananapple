@@ -204,3 +204,19 @@ function clearPanier() {
 }
 
 currentSlide(1);
+
+function OpenModal() {
+    var modal = document.getElementById('1');
+    modal.style.display = 'block';
+}
+
+// Fermer le modal
+function CloseModal() {
+    var modal = document.getElementById('1');
+    modal.style.display = 'none';
+}
+
+// Rediriger vers la page du panier
+function ViewCart() {
+    window.location.href = 'lien_vers_la_page_du_panier.php';
+}
