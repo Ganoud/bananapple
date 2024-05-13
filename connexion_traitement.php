@@ -1,6 +1,6 @@
 <?php
 
-require ("general.php");
+require "serverUtils.php";
 // Vérifier si tout a ete saisi
 
 // Vérifiez si le formulaire de connexion a été soumis
@@ -9,24 +9,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $hashed_password = password_hash($passowrd, PASSWORD_DEFAULT);
-
-    $requete = "SELECT email, password FROM users WHERE email=?";
+    $requete = "SELECT email, password, id FROM users WHERE email=?";
     $statement = $conn->prepare($requete);
-    $statement->bind_param("s", $email)
+    $statement->bind_param("s", $email);
     $statement->execute();
     $result = $statement->get_result();
     $user = $result->fetch_assoc();
-    
-    if ($user && password_verify($hashed_password, $user['password']))
-    {
-        $_SESSION['email'] = $email;
 
-        header("Location: " . $base_url, "acceuil.php");
+    if (password_verify($password, $user['password'])) {
+        $_SESSION['userId'] = $user["id"];
+        $_SESSION["connected"] = true;
+
+        header("Location: " . $base_url . "accueil.php");
         exit();
-    }
-    else
-    {
+    } else {
         echo "Adresse e-mail ou mot de passe incorrect.";
     }
 
@@ -36,4 +32,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->close();
     $connexion->close();
 }
-?>

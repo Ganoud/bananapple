@@ -11,7 +11,7 @@
     <div class="inscription-box">
         <img src="logopetit.png" alt="">
         <h2 class="form-element">Connexion</h2>
-        <form action="inscription_traitement.php" method="post">
+        <form action="connexion_traitement.php" method="post">
 
             <div class="form-element">
                 <label for="email">

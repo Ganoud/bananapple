@@ -26,7 +26,7 @@
 
     $ids = implode(',', array_keys($_SESSION["panier"]));
 
-    $request = "SELECT products.id,     products.name as productName, product_category.name as categoryName, products.description, products.price, products.discount FROM products JOIN product_category ON products.category_id=product_category.id WHERE products.id IN ($ids);";
+    $request = "SELECT products.id, products.name as productName, product_category.name as categoryName, products.description, products.price, products.discount FROM products JOIN product_category ON products.category_id=product_category.id WHERE products.id IN ($ids);";
     $statement = $conn->prepare($request);
     $statement->execute();
     $products = $statement->get_result();
