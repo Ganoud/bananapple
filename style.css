@@ -282,6 +282,11 @@ hr {
   background-color: grey;
 }
 
+.card-content-connexion {
+  padding: 20px;
+  background-color: #ccc;
+}
+
 .card-title {
   font-size: 20px;
   margin-bottom: 10px;
