@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('boutique.jpg');
+  background-image: url('boutique2.jpg');
   background-size: cover; 
   background-position: center;
 }
@@ -253,6 +253,7 @@ hr {
 
 .card-content {
   padding: 20px;
+  background-color: grey;
 }
 
 .card-title {
