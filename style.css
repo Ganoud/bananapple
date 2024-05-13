@@ -5,18 +5,33 @@
   font-weight: 300;
 }
 
-body {
-  background-image: url('boutique2.jpg');
-  background-size: cover; 
-  background-position: center;
-}
-
 .pagetop {
   background-color: #616A6B;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 30px;
   color: #D7DBDD;
+  padding: 10px;
 }
+
+.header-buttons {
+  display: flex;
+}
+
+.header-button {
+  background-color: transparent;
+  border: none;
+  color: #D7DBDD;
+  font-size: 16px;
+  margin-left: 10px; 
+  cursor: pointer;
+}
+
+.header-button:hover {
+  text-decoration: underline; 
+}
+
 
 .logoAndName {
   display: flex;
