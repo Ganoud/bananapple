@@ -266,3 +266,75 @@ hr {
     width: calc(100% - 20px);
   }
 }
+
+.modal {
+  display: none; /* Par défaut, le modal est caché */
+  position: fixed; /* Position fixe pour qu'il reste au centre */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  z-index: 9999; /* Assurez-vous que le modal s'affiche au-dessus de tout le reste */
+}
+
+/* Contenu du modal */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%; /* Largeur maximale du contenu */
+  max-height: 80%; /* Hauteur maximale du contenu */
+  overflow: auto; /* Activation du défilement si le contenu est trop long */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+/* Bouton pour fermer le modal */
+.close 
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Style du carousel */
+.carousel 
+{
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel-item 
+{
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.carousel-item img 
+{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Style des vignettes */
+.carousel-thumbnails 
+{
+  margin-top: 10px;
+}
+
+.carousel-thumbnails img 
+{
+  width: 50px; /* Taille des vignettes */
+  height: auto;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
