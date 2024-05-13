@@ -23,7 +23,7 @@
     <hr>
     <div class="card-container">
         <div class="card">
-            <div class="card-content-connexion">
+            <div class="card-content-content">
                 <h2 class="card-title">Se connecter</h2>
                 <div class="inscription-box">
                     <img src="logopetit.png" alt="">
@@ -47,6 +47,7 @@
                     </form>
                 </div>
             </div>
+            <a href="inscription.php" class="a-card">Créer un compte</a>
         </div>
     </div>
 </body>
