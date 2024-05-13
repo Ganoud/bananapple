@@ -17,7 +17,7 @@
     require "general.php";
     require "menu.php";
     ?>
-    <h2 class="cat-title">
+    <h2 class="page-title">
         <?php
         if (isset($_GET['categorie'])) {
             $categorie = $_GET['categorie'];
@@ -49,6 +49,7 @@
 
         foreach ($products as $product) {
             // show card for each product
+            echo "<p>" . $product["name"] . "</p>";
         }
         ?>
     </div>

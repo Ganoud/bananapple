@@ -17,7 +17,7 @@ h1.title {
   align-items: center;
 }
 
-.cat-title {
+.page-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,13 +181,14 @@ li a:hover:not(.active) {
   text-align: center;
   border: 1px solid #CACACA;
   padding: 0 0 13px 0;
+  border-radius: 10%;
 }
 
 .form-element {
   padding: 5px 0;
 }
 
-.button {
+input[type=submit] {
   background-color: white;
   border: 1px solid;
   color: black;
@@ -199,25 +200,31 @@ li a:hover:not(.active) {
   margin: 4px 2px;
 }
 
-.button:hover {
+input[type=submit]:hover {
   background-color: #a8a8a8;
+}
+
+input[type=email],
+input[type=password] {
+  border: 2px solid #CACACA;
+  border-radius: 4px;
 }
 
 hr {
   width: 50%;
   margin: auto;
 }
-.card-container 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Pour que les cartes s'enroulent sur plusieurs lignes si nécessaire /
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Pour que les cartes s'enroulent sur plusieurs lignes si nécessaire /
     margin-top: 50px; / Ajustez selon vos besoins */
 }
 
-.card 
-{
+.card {
   width: 400px;
   margin: 10px 20px;
   border: 1px solid #ccc;
@@ -226,56 +233,52 @@ hr {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-image 
-{
+.card-image {
   width: 100%;
   height: 400px;
   background: url('https://via.placeholder.com/400');
   background-size: cover;
 }
 
-.card-content
-{
+.card-content {
   padding: 20px;
 }
 
-  .card-title 
-{
+.card-title {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-  .card-description 
-{
+.card-description {
   font-size: 16px;
   color: #555;
 }
 
-@media screen and (max-width: 768px) 
-{
-  .card 
-  {
+@media screen and (max-width: 768px) {
+  .card {
     width: calc(50% - 20px);
   }
 }
 
-@media screen and (max-width: 480px) 
-{
-  .card 
-  {
+@media screen and (max-width: 480px) {
+  .card {
     width: calc(100% - 20px);
   }
 }
 
 .modal {
-  display: none; /* Par défaut, le modal est caché */
-  position: fixed; /* Position fixe pour qu'il reste au centre */
+  display: none;
+  /* Par défaut, le modal est caché */
+  position: fixed;
+  /* Position fixe pour qu'il reste au centre */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-  z-index: 9999; /* Assurez-vous que le modal s'affiche au-dessus de tout le reste */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fond semi-transparent */
+  z-index: 9999;
+  /* Assurez-vous que le modal s'affiche au-dessus de tout le reste */
 }
 
 /* Contenu du modal */
@@ -287,15 +290,18 @@ hr {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  max-width: 80%; /* Largeur maximale du contenu */
-  max-height: 80%; /* Hauteur maximale du contenu */
-  overflow: auto; /* Activation du défilement si le contenu est trop long */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombre portée */
+  max-width: 80%;
+  /* Largeur maximale du contenu */
+  max-height: 80%;
+  /* Hauteur maximale du contenu */
+  overflow: auto;
+  /* Activation du défilement si le contenu est trop long */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* Ombre portée */
 }
 
 /* Bouton pour fermer le modal */
-.close 
-{
+.close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -304,20 +310,17 @@ hr {
 }
 
 /* Style du carousel */
-.carousel 
-{
+.carousel {
   display: flex;
   overflow-x: auto;
 }
 
-.carousel-item 
-{
+.carousel-item {
   flex: 0 0 auto;
   margin-right: 10px;
 }
 
-.carousel-item img 
-{
+.carousel-item img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -325,16 +328,40 @@ hr {
 }
 
 /* Style des vignettes */
-.carousel-thumbnails 
-{
+.carousel-thumbnails {
   margin-top: 10px;
 }
 
-.carousel-thumbnails img 
-{
-  width: 50px; /* Taille des vignettes */
+.carousel-thumbnails img {
+  width: 50px;
+  /* Taille des vignettes */
   height: auto;
   margin-right: 5px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.cart-item {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #CACACA;
+  padding: 0;
+  /*   border-radius: 10%; */
+}
+
+.testpourlinstan {
+  display: flex;
+  font-size: 30px;
+  margin: 3em auto;
+}
+
+.cart-items-container {
+  width: 90%;
+}
+
+.cart-summary {
+  border: 2px solid red;
+  width: 25%;
+  text-align: center;
 }
