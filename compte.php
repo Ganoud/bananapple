@@ -18,7 +18,7 @@
 
 <body>
     <?php
-    require "general.php";
+    require "serveurUtils.php";
     require "menu.php";
     ?>
     <h2 class="page-title">Votre panier</h2>
