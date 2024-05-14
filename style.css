@@ -470,3 +470,8 @@ hr {
   text-align: center;
   letter-spacing: 5px;
 }
+
+.discount {
+  color: red;
+  text-decoration: line-through;
+}

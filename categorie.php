@@ -46,6 +46,7 @@
             $desc = $product["description"];
             $id = $product["id"];
             $price = $product["price"];
+            $discount = $product["discount"];
             if ($product["image_path"] == null) {
                 $imgUrl = "dossier image/1.jpg";
             } else {

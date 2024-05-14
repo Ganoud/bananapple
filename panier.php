@@ -60,8 +60,9 @@
                 $total = 0;
                 foreach ($products as $product) {
                     $amount = $_SESSION["panier"][$product["id"]];
+                    $price = $product["price"];
                     echo "- " . $product["productName"] . " x" . $amount . "<br>";
-                    $total += $product["price"] * $amount;
+                    $total += round($price * (1 - ($discount / 100)), 2) * $amount;
                 }
                 ?>
                 <br>

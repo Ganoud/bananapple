@@ -21,7 +21,13 @@
         <div class="cart-info">
             Prix :
             <br>
-            <?php echo $price . "€" ?>
+            <?php
+            if ($discount == null) {
+                echo "<span>" . $price . "€</span>";
+            } else {
+                echo "<span class='discount'>" . $price . "€</span><br><span>" . round($price * (1 - ($discount / 100)), 2) . "€";
+            }
+            ?>
         </div>
     </div>
 </div>

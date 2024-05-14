@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['userId'] = $user["id"];
         $_SESSION["connected"] = true;
 
-        header("Location: " . $base_url . "accueil.php");
+        header("Location: " . $base_url . "compte.php");
         exit();
     } else {
         echo "Adresse e-mail ou mot de passe incorrect.";

@@ -24,10 +24,12 @@
             $desc = $product["description"];
             $id = $product["id"];
             $price = $product["price"];
+            $discount = $product["discount"];
             if ($product["image_path"] == null) {
                 $imgUrl = "dossier image/1.jpg";
             } else {
-                $imgUrl = $product["image_path"] . "/1.jpg";
+                $rand = rand(1, 4);
+                $imgUrl = $product["image_path"] . "/" . $rand . ".jpg";
             }
             include "card.php";
         }

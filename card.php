@@ -6,7 +6,14 @@
         <div>
             <button onclick="OpenModal();addToPanier(<?php echo $id ?>, 1, )" class="fancyButton">Ajouter au
                 panier</button>
-            <?php echo $price . "€" ?>
+
+            <?php
+            if ($discount == null) {
+                echo "<span>" . $price . "€</span>";
+            } else {
+                echo "<span class='discount'>" . $price . "€</span>  <span>" . round($price * (1 - ($discount / 100)), 2) . "€";
+            }
+            ?>
         </div>
 
     </div>
