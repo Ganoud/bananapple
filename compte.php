@@ -12,10 +12,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400&display=swap"
         rel="stylesheet">
+
+
 </head>
 
 <body>
     <?php
+    require "serverUtils.php";
     require "serverUtils.php";
     require "menu.php";
     ?>

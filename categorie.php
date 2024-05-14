@@ -6,6 +6,7 @@
     require "headBase.php";
     require "serverUtils.php";
     ?>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -43,6 +44,13 @@
         foreach ($products as $product) {
             $name = $product["name"];
             $desc = $product["description"];
+            $id = $product["id"];
+            $price = $product["price"];
+            if ($product["image_path"] == null) {
+                $imgUrl = "dossier image/1.jpg";
+            } else {
+                $imgUrl = $product["image_path"] . "/1.jpg";
+            }
             include "card.php";
         }
         ?>

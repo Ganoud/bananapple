@@ -95,38 +95,35 @@ function showImage(index) {
 }
 
 function openModal(productName, productPrice, images) {
-    var modal = document.getElementById('MyModal');
-    var carousel = document.getElementById('carousel');
+    console.log("ça fonctionne");
+    var modal = document.getElementById('modaleProduit');
+    //var carousel = document.getElementById('carousel');
     var thumbnailsContainer = document.querySelector('.carousel-thumbnails');
-    var productNameElement = document.getElementById('productName');
-    var productPriceElement = document.getElementById('productPrice');
 
     // Mettre à jour le contenu du modal
-    productNameElement.innerText = productName;
-    productPriceElement.innerText = 'Prix: ' + productPrice + ' €';
-    carousel.innerHTML = '';
-    thumbnailsContainer.innerHTML = '';
+    //carousel.innerHTML = '';
+    //thumbnailsContainer.innerHTML = '';
 
-    // Ajouter les images au carousel et les vignettes
-    images.forEach(function (image, index) {
-        var carouselItem = document.createElement('div');
-        carouselItem.classList.add('.carousel-item');
-        carouselItem.innerHTML = '<img src="' + image + '" alt="Image ' + (index + 1) + '">';
-        if (index === 0) {
-            carouselItem.classList.add('active');
-        }
-
-
-        var thumbnail = document.createElement('img');
-        thumbnail.src = image;
-        thumbnail.alt = 'Image ' + (index + 1);
-        thumbnail.onclick = function () {
-            showImage(index);
-        };
-        thumbnailsContainer.appendChild(thumbnail);
-
-        carousel.appendChild(carouselItem);
-    });
+    /*    // Ajouter les images au carousel et les vignettes
+       images.forEach(function (image, index) {
+           var carouselItem = document.createElement('div');
+           carouselItem.classList.add('.carousel-item');
+           carouselItem.innerHTML = '<img src="' + image + '" alt="Image ' + (index + 1) + '">';
+           if (index === 0) {
+               carouselItem.classList.add('active');
+           }
+   
+   
+           var thumbnail = document.createElement('img');
+           thumbnail.src = image;
+           thumbnail.alt = 'Image ' + (index + 1);
+           thumbnail.onclick = function () {
+               showImage(index);
+           };
+           thumbnailsContainer.appendChild(thumbnail);
+   
+           carousel.appendChild(carouselItem);
+       }); */
 
     modal.style.display = 'block';
 }
@@ -218,5 +215,5 @@ function CloseModal() {
 
 // Rediriger vers la page du panier
 function ViewCart() {
-    window.location.href = 'lien_vers_la_page_du_panier.php';
+    window.location.href = 'panier.php';
 }

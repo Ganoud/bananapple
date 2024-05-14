@@ -230,7 +230,9 @@ li a:hover:not(.active) {
   padding: 5px 0;
 }
 
-input[type=submit] {
+
+input[type=submit],
+.fancyButton {
   background-color: white;
   border: 1px solid;
   color: black;
@@ -242,14 +244,17 @@ input[type=submit] {
   margin: 4px 2px;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover,
+.fancyButton:hover {
   background-color: #a8a8a8;
 }
 
 input[type=email],
-input[type=password] {
+input[type=password],
+input[type=text],
+textarea {
   border: 2px solid #CACACA;
-  border-radius: 69px;
+  border-radius: 5px;
 }
 
 hr {
@@ -276,15 +281,14 @@ hr {
 }
 
 .card-image {
-  width: 100%;
+  display: flex;
+  width: 400px;
   height: 400px;
-  background: url('https://via.placeholder.com/400');
-  background-size: cover;
 }
 
 .card-content {
   padding: 20px;
-  background-color: grey;
+  background-color: rgb(230, 230, 230);
 }
 
 .card-content-connexion {
@@ -455,4 +459,14 @@ hr {
   cursor: pointer;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3em auto;
+}
 
+.contact-title {
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 5px;
+}

@@ -1,5 +1,5 @@
 <div class="cart-item">
-    <img src="https://www.golem.sk/wp-content/uploads/2015/05/iphone-6-plus-400x400_0.jpg" alt="" class="cart-image">
+    <img src="<?php echo $imgUrl ?>" alt="" class="cart-image">
     <div class="cart-content">
         <div>
             <div class="cart-title"><?php echo $name ?></div>

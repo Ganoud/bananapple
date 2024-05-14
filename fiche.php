@@ -16,6 +16,16 @@
     FAIRE FICHE PRODUIT
     ENLEVER CE QUI EST EN DESSOUS
 -->
+    <div class="modal" id="1">
+        <div class="modal-content">
+            <span class="close" onclick="CloseModal()">&times;</span>
+            <p>Votre produit a été ajouté au panier !</p>
+            <button onclick="ViewCart()">Voir mon panier</button>
+        </div>
+    </div>
+
+    <button onclick="openModal()">Ajouter au panier</button>
+
     <div class="card-container">
         <div class="card">
             <div class="card-image"></div>
@@ -33,7 +43,7 @@
         </div>
     </div>
     <!-- Modal -->
-    <div id="MyModal" class="modal">
+    <div id="MyModal" class="modal" onclick="openModal()">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div id="carousel" class="carousel">
