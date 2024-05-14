@@ -61,7 +61,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `fk_category_id` (`category_id`),
   CONSTRAINT `fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `product_category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,8 +71,35 @@ CREATE TABLE `products` (
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
 INSERT INTO `products` VALUES
-(1,'bPhone 1',100.00,NULL,NULL,NULL,NULL),
-(4,'bPhone 2',NULL,NULL,2,NULL,NULL);
+(25,'BiPhone X',999.99,'Le dernier smartphone révolutionnaire de Banana. Avec un écran Super Bi Retina XDR.',2,NULL,'dossier image/Biphone/x'),
+(26,'BiPhone 11 Pro',1099.99,'Le téléphone le plus puissant jamais créé par Banana. Doté de trois caméras révolutionnaires.',2,10.00,'dossier image/Biphone/11 pro'),
+(27,'BiPhone SE (2021)',499.99,'Un smartphone compact et abordable par Banana, avec la puissance de la puce A13.',2,NULL,'dossier image/Biphone/se'),
+(28,'BiPhone 13',1099.99,'Le dernier bijou de Banana, doté d\'un design élégant et de la technologie de pointe.',2,10.00,'dossier image/Biphone/13'),
+(29,'BiPhone 12 Mini',699.99,'Un téléphone compact mais puissant par Banana, avec un écran Super Bi Retina.',2,20.00,'dossier image/Biphone/12 mini'),
+(30,'BiPhone XR',599.99,'Un smartphone coloré et performant par Banana, doté du puissant processeur A12 Bionic.',2,30.00,'dossier image/Biphone/xr'),
+(31,'BiPhone 6S',299.99,'Un classique revisité par Banana, avec un écran Retina HD et un design emblématique.',2,NULL,NULL),
+(32,'BiPhone XS Max',899.99,'Un téléphone élégant et puissant par Banana, avec un grand écran Super Bi Retina.',2,NULL,NULL),
+(33,'BiPhone 8 Plus',799.99,'Un téléphone phare par Banana, doté d\'une double caméra et de la puissance de la puce A11 Bionic.',2,NULL,NULL),
+(34,'BiPhone 5S',199.99,'Un classique intemporel par Banana, avec un design emblématique et des performances fiables.',2,NULL,NULL),
+(35,'BiPad Pro',1299.99,'La tablette la plus avancée de Banana, avec un écran Liquid Bi Retina et une puce M1.',3,NULL,NULL),
+(36,'BiPad Air',899.99,'Une tablette légère et puissante par Banana, avec un écran Liquid Bi Retina et la compatibilité Apple Pencil.',3,NULL,NULL),
+(37,'BiPad Mini',499.99,'Une tablette compacte par Banana, idéale pour la portabilité et la productivité.',3,NULL,NULL),
+(38,'BiPad (2021)',599.99,'La dernière version de la tablette emblématique de Banana, avec un design élégant et des performances supérieures.',3,NULL,NULL),
+(39,'BiPad Pro 12.9 (2022)',1499.99,'La tablette ultime de Banana, avec un écran Liquid Bi XDR et des capacités de studio.',3,10.00,NULL),
+(40,'BiPad 10.2 (2022)',329.99,'La tablette polyvalente de Banana, parfaite pour le travail et les loisirs.',3,20.00,NULL),
+(41,'BiPad Pro 11 (2022)',1099.99,'Une tablette puissante et portable par Banana, conçue pour les professionnels créatifs.',3,NULL,NULL),
+(42,'BiPad 9.7 (2021)',399.99,'Une tablette abordable par Banana, avec un écran Retina et une compatibilité avec Apple Pencil.',3,NULL,NULL),
+(43,'BiPad Mini 6 (2021)',699.99,'La dernière version de la tablette compacte de Banana, avec des performances améliorées et un design élégant.',3,NULL,NULL),
+(44,'BiPad Air 5 (2021)',799.99,'Une tablette élégante et performante par Banana, avec un design fin et des performances améliorées.',3,30.00,NULL),
+(45,'BiWatch Series 7',399.99,'La dernière montre intelligente de Banana, avec un écran plus grand et des fonctionnalités avancées de suivi de la santé.',4,NULL,NULL),
+(46,'BiWatch SE',279.99,'Une montre intelligente abordable par Banana, avec des fonctionnalités avancées de suivi de la forme physique et de la santé.',4,NULL,NULL),
+(47,'BiWatch Series 6',349.99,'Une montre intelligente élégante et puissante par Banana, dotée d\'un capteur d\'oxygène dans le sang et d\'un suivi avancé de la forme physique.',4,NULL,NULL),
+(48,'BiWatch Series 5',299.99,'Une montre intelligente emblématique de Banana, avec un écran Always-On Retina et une boussole intégrée.',4,20.00,NULL),
+(49,'BiWatch Series 4',249.99,'Une montre intelligente avancée de Banana, avec un écran plus grand et des fonctionnalités de suivi de la santé améliorées.',4,NULL,NULL),
+(50,'BiWatch Series 3',199.99,'Une montre intelligente abordable par Banana, idéale pour le suivi de la forme physique et les notifications.',4,NULL,NULL),
+(51,'BiWatch SE (2021)',279.99,'La version économique de la montre intelligente de Banana, avec un design élégant et des fonctionnalités avancées de suivi de la santé.',4,30.00,NULL),
+(52,'BiWatch Series 2',199.99,'Une montre intelligente avancée de Banana, dotée d\'un GPS intégré et d\'une résistance à l\'eau.',4,NULL,NULL),
+(53,'BiWatch Series 1',149.99,'La première montre intelligente de Banana, avec un écran Retina et des fonctionnalités de suivi de la santé.',4,NULL,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,13 +115,13 @@ CREATE TABLE `users` (
   `name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `birthdate` date DEFAULT NULL,
   `adresse` varchar(150) DEFAULT NULL,
   `zip_code` varchar(5) DEFAULT NULL,
   `city` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +133,16 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` VALUES
 (1,'Matthias','LIETARD-ANDREOLI',NULL,NULL,NULL,NULL,NULL,NULL),
 (2,'Nicolas','PAJOT',NULL,NULL,NULL,NULL,NULL,NULL),
-(7,'Papi Gilou',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+(12,NULL,NULL,'test@test.com','$2y$10$pNW3tsAAO98OP8j1jgQAI.JO2.kUg5KDjcCdzmMfDxI9s.g/khBxK',NULL,NULL,NULL,NULL),
+(13,NULL,NULL,'matthias.lietard@outlook.fr','$2y$10$fmzNA6ZplpMgUZV7HQxD2O9YD01EsISN5g5azHJbgoVtjM90.0PNy',NULL,NULL,NULL,NULL),
+(14,NULL,NULL,'a@a.a','$2y$10$1xv5Dnrjj4egvpM.k6uHT.ag9F17WW9QukpLO9Ab63mTl/BrS.3Ly',NULL,NULL,NULL,NULL),
+(15,NULL,NULL,'matthias.lietard@outlook.fr','$2y$10$tsOTrRmVIhfahE8Nd.ETduhGn6EtsvXzVs3O4uNu4wIgkFWaquSsS',NULL,NULL,NULL,NULL),
+(16,NULL,NULL,'feur@feur.feur','$2y$10$A6jv5ATm.BTATgQZuNLVK.agUki4wWYDnaXeyZXZjaKf1KXOf16kK',NULL,NULL,NULL,NULL),
+(17,NULL,NULL,'a@a.a','$2y$10$mvpAS5Y2zfZ.jwg5Fbb8D.IelmVuSLr/h5PMiEwKGNTpzeJPKxFIS',NULL,NULL,NULL,NULL),
+(18,NULL,NULL,'a@a.a','$2y$10$OFlcMYorFxYveaL6RvGxc.tzrxRm17gi8e1ADBp6NlHm.lHR4M6vO',NULL,NULL,NULL,NULL),
+(19,NULL,NULL,'a@a.a','$2y$10$KZlIj67ytXfDsmIRq3jBeesK5vfDAfamqQzQmvxk6R7mhmenkj92G',NULL,NULL,NULL,NULL),
+(20,NULL,NULL,'matthias.lietard@outlook.fr','$2y$10$UZ8mlK81hVzGeGQouaOOVuEKWedEek4g9Y5UyQHM62nG9IigKKuIO',NULL,NULL,NULL,NULL),
+(21,NULL,NULL,'ntm@zbi.com','$2y$10$e3WUrSHPMPtWdE8qYpVXnuMqQUJYml5eAkY3Z8/gknk0.SQLGH8ni',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -119,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-01 18:31:41
+-- Dump completed on 2024-05-14 10:49:13
