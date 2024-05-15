@@ -1,8 +1,8 @@
 <?php
 
-$hostname = "banana.lemonier.online";
-$dbUser = "admin";
-$dbPassword = "Iebicu3ohpohtee8";
+$hostname = "localhost";
+$dbUser = "bananaman";
+$dbPassword = "banane";
 $dbName = "BananappleDatabase";
 $conn = mysqli_connect($hostname, $dbUser, $dbPassword, $dbName);
 if (!$conn) {

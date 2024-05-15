@@ -11,11 +11,11 @@
                 Quantité :
                 <br>
                 <button class="amount-button"
-                    onclick="addToPanier(<?php echo $productId . ', ' . $amount - 1 ?>, true)">-</button>
+		    onclick="addToPanier(<?php echo $productId ?>, <?php echo $amount - 1 ?>, true)">-</button>
 
                 <?php echo $amount ?>
                 <button class="amount-button"
-                    onclick="addToPanier(<?php echo $productId . ', ' . $amount + 1 ?>, true)">+</button>
+		    onclick="addToPanier(<?php echo $productId ?>, <?php echo $amount + 1 ?>, true)">+</button>
             </div>
         </div>
         <div class="cart-info">
@@ -25,7 +25,7 @@
             if ($discount == null) {
                 echo "<span>" . $price . "€</span>";
             } else {
-                echo "<span class='discount'>" . $price . "€</span><br><span>" . round($price * (1 - ($discount / 100)), 2) . "€";
+		    echo "<span class='discount'>" . $price . "€</span><br><span>" . round($price * (1 - ($discount / 100)), 2) . "€</span>";
             }
             ?>
         </div>
